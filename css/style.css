@@ -24,12 +24,10 @@ body {
   padding: 1.5rem 7%;
   font-size: 2rem;
   background-color: rgb(244, 183, 1);
-  border-bottom: 3px solid red;
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
-  color: rgb(41, 15, 0);
+  left: 0;
   z-index: 1000;
 }
 .header__logo {
@@ -40,7 +38,6 @@ body {
   font-size: 2.25rem;
   text-decoration: none;
   color: rgb(26, 10, 0);
-  font-weight: bold;
 }
 .header__logo img {
   margin-right: 0.5em;
@@ -57,11 +54,13 @@ body {
 }
 .header__navbar a:hover {
   font-size: 2.5rem;
+  border-bottom: 0.1rem solid black;
+  padding-bottom: 0.5rem;
 }
 .header__icons div {
   margin-left: 2rem;
-  color: rgb(26, 10, 0);
   font-size: 2.5rem;
+  color: rgb(41, 15, 0);
   cursor: pointer;
 }
 .header__search-form {
@@ -73,6 +72,8 @@ body {
   width: 50rem;
   height: 5rem;
   background: #fff;
+  transform: scaleY(0);
+  transform-origin: top;
 }
 .header__search-form input {
   height: 100%;
@@ -89,7 +90,111 @@ body {
   font-size: 2.2rem;
   cursor: pointer;
 }
+.header__cart-container {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  padding: 0 1.5rem;
+  height: calc(100vh - 9.5rem);
+  width: 35rem;
+  background: #fff;
+}
+.header__cart-container .cart-item {
+  position: relative;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.header__cart-container .cart-item .fa-times {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+  transition: font-size 0.5s;
+}
+.header__cart-container .cart-item .fa-times:hover {
+  font-size: 2.5rem;
+  color: rgb(26, 10, 0);
+}
+.header__cart-container .cart-item img {
+  height: 7rem;
+}
+.header__cart-container .cart-item .content h3 {
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+}
+.header__cart-container .cart-item .content .price {
+  font-size: 1.75rem;
+  color: rgb(41, 15, 0);
+  padding-bottom: 0.5rem;
+}
+.header__cart-container .btn {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 3rem;
+  padding: 0.8rem 3rem;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: letter-spacing 0.5s;
+}
+.header__cart-container .btn a {
+  font-weight: bold;
+  text-align: center;
+  color: rgb(41, 15, 0);
+  text-decoration: none;
+}
+.header__cart-container .btn:hover {
+  letter-spacing: 0.1rem;
+}
 
 #menu-btn {
   display: none;
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 55%;
+  }
+  #menu-btn {
+    display: inline-block;
+  }
+  .header {
+    padding: 1.5rem 3rem;
+  }
+  .header__logo img {
+    margin-left: 0;
+  }
+  .header__navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 30rem;
+    height: calc(100vh - 9.5rem);
+    background: white;
+  }
+  .header__navbar a {
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  .header__search-form {
+    width: 90%;
+    right: 2rem;
+  }
+}
+.active {
+  right: 0;
+}
+
+.active-search-form {
+  transform: scale(1);
 }/*# sourceMappingURL=style.css.map */
