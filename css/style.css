@@ -2,6 +2,11 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  outline: none;
+  text-decoration: none;
+  border: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
 }
 
 html {
@@ -11,57 +16,61 @@ html {
   scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5rem;
+}
+
 body {
-  font-family: "Montserrat", sans-serif;
-  background-color: rgb(255, 237, 214);
-  color: rgb(101, 76, 62);
+  font-family: "Roboto", sans-serif;
+  background: #010103;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 7%;
-  font-size: 2rem;
-  background-color: rgb(244, 183, 1);
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
+  padding: 1.5rem 7%;
+  background: #010103;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.3);
   z-index: 1000;
 }
-.header__logo {
-  display: flex;
-  align-items: center;
+.header__logo i {
   height: 6rem;
-  font-family: "Ga Maamli", sans-serif;
-  font-size: 2.25rem;
-  text-decoration: none;
-  color: rgb(26, 10, 0);
-}
-.header__logo img {
-  margin-right: 0.5em;
-  margin-left: -2.5em;
-  height: 3em;
+  font-size: 5.5rem;
+  color: #d3ad7f;
 }
 .header__navbar a {
-  margin: 0 0.75rem;
-  font-size: 2.2rem;
-  text-decoration: none;
-  color: rgb(26, 10, 0);
-  font-weight: bold;
-  transition: font-size 0.5s;
+  margin: 0 1rem;
+  font-size: 2rem;
+  color: #fff;
+  font-family: "Ga Maamli", sans-serif;
 }
 .header__navbar a:hover {
-  font-size: 2.5rem;
-  border-bottom: 0.1rem solid black;
   padding-bottom: 0.5rem;
+  color: #d3ad7f;
+  border-bottom: 0.1rem solid #d3ad7f;
 }
 .header__icons div {
   margin-left: 2rem;
   font-size: 2.5rem;
-  color: rgb(41, 15, 0);
+  color: #fff;
   cursor: pointer;
+}
+.header__icons div:hover {
+  color: #d3ad7f;
 }
 .header__search-form {
   position: absolute;
@@ -76,12 +85,12 @@ body {
   transform-origin: top;
 }
 .header__search-form input {
+  padding: 1rem;
+  margin-right: 0.5em;
   height: 100%;
   width: 100%;
   font-size: 1.6rem;
   color: #000;
-  padding: 1rem;
-  margin-right: 0.5em;
   text-transform: none;
 }
 .header__search-form label {
@@ -89,6 +98,9 @@ body {
   color: #000;
   font-size: 2.2rem;
   cursor: pointer;
+}
+.header__search-form label:hover {
+  color: #d3ad7f;
 }
 .header__cart-container {
   position: absolute;
@@ -100,10 +112,10 @@ body {
   background: #fff;
 }
 .header__cart-container .cart-item {
-  position: relative;
-  margin: 2rem 0;
   display: flex;
   align-items: center;
+  position: relative;
+  margin: 2rem 1rem;
   gap: 1.5rem;
 }
 .header__cart-container .cart-item .fa-times {
@@ -117,31 +129,32 @@ body {
 }
 .header__cart-container .cart-item .fa-times:hover {
   font-size: 2.5rem;
-  color: rgb(26, 10, 0);
+  color: #d3ad7f;
 }
 .header__cart-container .cart-item img {
   height: 7rem;
 }
 .header__cart-container .cart-item .content h3 {
   font-size: 2rem;
+  color: rgb(41, 15, 0);
   padding-bottom: 0.5rem;
 }
 .header__cart-container .cart-item .content .price {
-  font-size: 1.75rem;
+  font-size: 2rem;
   color: rgb(41, 15, 0);
   padding-bottom: 0.5rem;
 }
 .header__cart-container .btn {
   display: flex;
   justify-content: center;
-  text-align: center;
-  margin: 3rem;
   padding: 0.8rem 3rem;
   margin-top: 1rem;
+  text-align: center;
   font-size: 1.7rem;
   text-align: center;
   border: 1px solid black;
   border-radius: 5px;
+  background-color: #d3ad7f;
   cursor: pointer;
   transition: letter-spacing 0.5s;
 }
@@ -161,34 +174,39 @@ body {
 
 @media (max-width: 992px) {
   html {
-    font-size: 55%;
-  }
-  #menu-btn {
-    display: inline-block;
+    font-size: 62.5%;
   }
   .header {
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 2rem;
   }
-  .header__logo img {
-    margin-left: 0;
+}
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
   }
   .header__navbar {
     position: absolute;
     top: 100%;
     right: -100%;
-    width: 30rem;
     height: calc(100vh - 9.5rem);
-    background: white;
+    width: 30rem;
+    background: #fff;
   }
   .header__navbar a {
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
+    color: #000;
     font-size: 2rem;
   }
   .header__search-form {
     width: 90%;
     right: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
   }
 }
 .active {

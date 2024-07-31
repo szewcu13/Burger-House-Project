@@ -6,7 +6,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
 			rel="stylesheet"
 		/>
 		<script
@@ -17,82 +17,79 @@
 		<title>Burger House</title>
 	</head>
 	<body>
+		<header class="header" id="header">
+			<a href="#" class="header__logo">
+				<i class="fa-solid fa-burger"></i>
+			</a>
 
-        <header class="header" id="header">
-            
-                <a href="#" class="header__logo">
-                    <div>
-                        <img src="img/logo-burger.svg" alt="logo burgera">
-                    </div>
-                Burger House
-                </a>
+			<nav class="header__navbar">
+				<a href="#home">Home</a>
+				<a href="#menu">Menu</a>
+				<a href="#recipe">Przepis</a>
+				<a href="#delivery">Dostawa</a>
+				<a href="#review">Opinie</a>
+				<a href="#contact">Kontakt</a>
+			</nav>
 
-                <nav class="header__navbar">
-                    <a href="#home">Home</a>
-                    <a href="#menu">Menu</a>
-                    <a href="#recipe">Przepis</a>
-                    <a href="#delivery">Dostawa</a>
-                    <a href="#review">Opinie</a>
-                    <a href="#contact">Kontakt</a>
-                </nav>
+			<div class="header__icons">
+				<div class="fas fa-search" id="search-btn"></div>
+				<div class="fas fa-shopping-cart" id="cart-btn"></div>
+				<div class="fas fa-bars" id="menu-btn"></div>
+			</div>
 
-                <div class="header__icons">
-                    <div class="fas fa-search" id="search-btn"></div>
-                    <div class="fas fa-shopping-cart" id="cart-btn"></div>
-                    <div class="fas fa-bars" id="menu-btn"></div>
-                </div>
+			<div class="header__search-form">
+				<input
+					type="search"
+					id="search-box"
+					placeholder="wpisz szukaną nazwę..."
+				/>
+				<label for="search-box" class="fas fa-search"></label>
+			</div>
 
-                <div class="header__search-form">
-                    <input type="search" id="search-box" placeholder="wpisz szukaną nazwę...">
-                    <label for="search-box" class="fas fa-search"></label>
-                </div>
+			<div class="header__cart-container">
+				<div class="cart-item">
+					<span class="fas fa-times"></span>
+					<img src="./img/popular-burger-chicken.png" alt="Chicken Burger" />
+					<div class="content">
+						<h3>Chicken Burger</h3>
+						<div class="price">34.99 zł</div>
+					</div>
+				</div>
+				<div class="cart-item">
+					<span class="fas fa-times"></span>
+					<img src="./img/popular-burger-classic.png" alt="Chicken Burger" />
+					<div class="content">
+						<h3>Chicken Burger</h3>
+						<div class="price">34.99 zł</div>
+					</div>
+				</div>
+				<div class="cart-item">
+					<span class="fas fa-times"></span>
+					<img src="./img/popular-burger-grill.png" alt="Chicken Burger" />
+					<div class="content">
+						<h3>Chicken Burger</h3>
+						<div class="price">34.99 zł</div>
+					</div>
+				</div>
+				<div class="cart-item">
+					<span class="fas fa-times"></span>
+					<img src="./img/popular-burger-meat.png" alt="Chicken Burger" />
+					<div class="content">
+						<h3>Chicken Burger</h3>
+						<div class="price">34.99 zł</div>
+					</div>
+				</div>
+				<div class="btn">
+					<a href="#">Złóż zamówienie</a>
+				</div>
+			</div>
+		</header>
 
-                <div class="header__cart-container">
-                    <div class="cart-item">
-                        <span class="fas fa-times"></span>
-                        <img src="./img/popular-burger-chicken.png" alt="Chicken Burger">
-                        <div class="content">
-                            <h3>Chicken Burger</h3>
-                            <div class="price">34.99 zł</div>
-                        </div>
-                    </div>
-                    <div class="cart-item">
-                        <span class="fas fa-times"></span>
-                        <img src="./img/popular-burger-classic.png" alt="Chicken Burger">
-                        <div class="content">
-                            <h3>Chicken Burger</h3>
-                            <div class="price">34.99 zł</div>
-                        </div>
-                    </div>
-                    <div class="cart-item">
-                        <span class="fas fa-times"></span>
-                        <img src="./img/popular-burger-grill.png" alt="Chicken Burger">
-                        <div class="content">
-                            <h3>Chicken Burger</h3>
-                            <div class="price">34.99 zł</div>
-                        </div>
-                    </div>
-                    <div class="cart-item">
-                        <span class="fas fa-times"></span>
-                        <img src="./img/popular-burger-meat.png" alt="Chicken Burger">
-                        <div class="content">
-                            <h3>Chicken Burger</h3>
-                            <div class="price">34.99 zł</div>
-                        </div>
-                    </div>
-                    <div class="btn">
-                        <a href="#">Złóż zamówienie</a>
-                    </div>
-                </div>
-            
-        </header>
+		<main class="main">
+			<section class="home section" id="home"></section>
+		</main>
 
-        <main class="main">
-            <section class="home section" id="home">
-
-            </section>
-        </main>
-
-		<script src="./js/main.js">Zamów</script>
+		<script src="./js/main.js">
+		</script>
 	</body>
 </html>
