@@ -30,7 +30,7 @@ html::-webkit-scrollbar-track {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
   background: #010103;
   color: rgb(255, 246, 235);
 }
@@ -40,8 +40,7 @@ section {
 }
 
 .section-title {
-  margin: 4rem 0;
-  font-family: "Oswald", sans-serif;
+  padding: 2rem 0;
   font-size: 4rem;
   text-align: center;
   text-transform: uppercase;
@@ -319,6 +318,58 @@ section {
   font-size: 2rem;
 }
 
+.menu__boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 1.5rem;
+}
+.menu__box {
+  padding: 3rem;
+  text-align: center;
+  border: 0.1rem solid #d3ad7f;
+  color: rgb(255, 246, 235);
+  transition: color 0.4s, background 0.4s;
+}
+.menu__box img {
+  height: 12rem;
+}
+.menu__box-title {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+.menu__box-price {
+  font-size: 2.5rem;
+  padding: 0.5rem 0;
+}
+.menu__box-price span {
+  font-size: 1.5rem;
+  text-decoration: line-through;
+}
+.menu__box-btn {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #d3ad7f;
+  font-size: 1.5rem;
+  font-style: oblique;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+.menu__box-btn a {
+  color: rgb(26, 10, 0);
+}
+.menu__box-btn:hover {
+  background-color: gold;
+}
+.menu__box:hover {
+  background: rgb(255, 246, 235);
+  color: rgb(26, 10, 0);
+}
+
 #menu-btn {
   display: none;
 }
@@ -382,6 +433,14 @@ section {
   .home__content-btn {
     width: 45%;
     font-size: 1.5rem;
+  }
+  .recipe__container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .menu__boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
   }
 }
 @media (max-width: 576px) {
