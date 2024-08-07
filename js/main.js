@@ -35,4 +35,5 @@ window.onscroll = () => {
 
 bars.addEventListener('click', showMenuMobile);
 cartBtn.addEventListener('click', showCart);
-searchBtn.addEventListener('click', showSearchForm)
+searchBtn.addEventListener('click', showSearchForm);
+

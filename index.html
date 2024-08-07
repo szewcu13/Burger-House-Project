@@ -13,8 +13,13 @@
 			src="https://kit.fontawesome.com/d5419b392a.js"
 			crossorigin="anonymous"
 		></script>
-		<link rel="stylesheet" href="./css/style.css" />
 		<title>Burger House</title>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 	<body>
 		<header class="header" id="header">
@@ -26,8 +31,8 @@
 				<a href="#home">Home</a>
 				<a href="#recipe">Przepis</a>
 				<a href="#menu">Menu</a>
-				<a href="#delivery">Dostawa</a>
 				<a href="#review">Opinie</a>
+				<!-- <a href="#delivery">Dostawa</a> -->
 				<a href="#contact">Kontakt</a>
 			</nav>
 
@@ -117,7 +122,7 @@
 								<p class="recipe__box-text">Świeża buła, idealnie upieczona.</p>
 							</div>
 						</div>
-						
+
 						<div class="recipe__card">
 							<div class="recipe__box">
 								<img src="./img/recipe-vegetable.png" alt="bread" />
@@ -143,10 +148,11 @@
 							</div>
 							<div>
 								<h3 class="recipe__box-title">Mięso</h3>
-								<p class="recipe__box-text">100% wołowiny, wielki i mięsisty!</p>
+								<p class="recipe__box-text">
+									100% wołowiny, wielki i mięsisty!
+								</p>
 							</div>
 						</div>
-
 
 						<div class="recipe__card">
 							<div class="recipe__box">
@@ -167,7 +173,7 @@
 				<h1 class="section-title">Nasze menu</h1>
 				<div class="menu__boxes">
 					<div class="menu__box">
-						<img src="./img/popular-burger-big.png" alt="">
+						<img src="./img/popular-burger-big.png" alt="" />
 						<h3 class="menu__box-title">Podwójny Wariat</h3>
 						<div class="menu__box-price">29.99 zł. <span>24.99 zł.</span></div>
 						<div class="menu__box-btn">
@@ -175,7 +181,7 @@
 						</div>
 					</div>
 					<div class="menu__box">
-						<img src="./img/popular-burger-chicken.png" alt="">
+						<img src="./img/popular-burger-chicken.png" alt="" />
 						<h3 class="menu__box-title">Kurczakowy Kozak</h3>
 						<div class="menu__box-price">29.99 zł. <span>24.99 zł.</span></div>
 						<div class="menu__box-btn">
@@ -183,7 +189,7 @@
 						</div>
 					</div>
 					<div class="menu__box">
-						<img src="./img/popular-burger-classic.png" alt="">
+						<img src="./img/popular-burger-classic.png" alt="" />
 						<h3 class="menu__box-title">Klasyczny Szał</h3>
 						<div class="menu__box-price">29.99 zł. <span>24.99 zł.</span></div>
 						<div class="menu__box-btn">
@@ -191,7 +197,7 @@
 						</div>
 					</div>
 					<div class="menu__box">
-						<img src="./img/popular-burger-grill.png" alt="">
+						<img src="./img/popular-burger-grill.png" alt="" />
 						<h3 class="menu__box-title">Grillowany Agent</h3>
 						<div class="menu__box-price">29.99 zł. <span>24.99 zł.</span></div>
 						<div class="menu__box-btn">
@@ -199,7 +205,7 @@
 						</div>
 					</div>
 					<div class="menu__box">
-						<img src="./img/popular-burger-meat.png" alt="">
+						<img src="./img/popular-burger-meat.png" alt="" />
 						<h3 class="menu__box-title">Mięsny Świr</h3>
 						<div class="menu__box-price">29.99 zł. <span>24.99 zł.</span></div>
 						<div class="menu__box-btn">
@@ -207,7 +213,7 @@
 						</div>
 					</div>
 					<div class="menu__box">
-						<img src="./img/popular-burger-big.png" alt="">
+						<img src="./img/popular-burger-big.png" alt="" />
 						<h3 class="menu__box-title">Giga Kozak</h3>
 						<div class="menu__box-price">29.99 zł. <span>24.99 zł.</span></div>
 						<div class="menu__box-btn">
@@ -216,8 +222,87 @@
 					</div>
 				</div>
 			</section>
+
+			<section class="review" id="review">
+				<h1 class="section-title">Opinie klientów</h1>
+				<div class="review__boxes">
+					<div class="review__box">
+						<div class="review__box-img">
+							<img src="./img/woman-one.jpg" alt="Anna Kowalska" />
+						</div>
+						<div class="review__box-info">
+							<div class="review__box-quote">
+								<i class="fas fa-quote-right"></i>
+							</div>
+							<p class="review__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, tempore fugiat! Dolore ratione inventore perspiciatis ipsum quibusdam atque fugiat perferendis.</p>
+							<strong>Anna Kowalska</strong>
+						</div>
+					</div>
+					<div class="review__box">
+						<div class="review__box-img">
+							<img src="./img/men-one.jpg" alt="Jan Nowak" />
+						</div>
+						<div class="review__box-info">
+							<div class="review__box-quote">
+								<i class="fas fa-quote-right"></i>
+							</div>
+							<p class="review__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, tempore fugiat! Dolore ratione inventore perspiciatis ipsum quibusdam atque fugiat perferendis.</p>
+							<strong>Jan Nowak</strong>
+						</div>
+					</div>
+					<div class="review__box">
+						<div class="review__box-img">
+							<img src="./img/men-two.webp" alt="Kamil Szyłak" />
+						</div>
+						<div class="review__box-info">
+							<div class="review__box-quote">
+								<i class="fas fa-quote-right"></i>
+							</div>
+							<p class="review__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, tempore fugiat! Dolore ratione inventore perspiciatis ipsum quibusdam atque fugiat perferendis.</p>
+							<strong class="strong">Kamil Szyłak</strong>
+						</div>
+					</div>
+					<div class="review__box">
+						<div class="review__box-img">
+							<img src="./img/women-two.jpg" alt="Agnieszka Ugbe" />
+						</div>
+						<div class="review__box-info">
+							<div class="review__box-quote">
+								<i class="fas fa-quote-right"></i>
+							</div>
+							<p class="review__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, tempore fugiat! Dolore ratione inventore perspiciatis ipsum quibusdam atque fugiat perferendis.</p>
+							<strong>Agnieszka Ugbe</strong>
+						</div>
+					</div>
+					<div class="review__box">
+						<div class="review__box-img">
+							<img src="./img/woman-three.jfif" alt="Karolina Podstawska" />
+						</div>
+						<div class="review__box-info">
+							<div class="review__box-quote">
+								<i class="fas fa-quote-right"></i>
+							</div>
+							<p class="review__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, tempore fugiat! Dolore ratione inventore perspiciatis ipsum quibusdam atque fugiat perferendis.</p>
+							<strong>Karolina Podstawska</strong>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 
+		<script
+			type="text/javascript"
+			src="//code.jquery.com/jquery-1.11.0.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+		></script>
+		<script src="./js/slick.js"></script>
 		<script src="./js/main.js"></script>
 	</body>
 </html>
